@@ -1,6 +1,10 @@
 class NotesController < ApplicationController
-	def index
-		
+	def clear
+		session.delete(:access_token)
+	end
+
+	def index 
+		redirect_to action: 'authorize' if session[:access_token].nil?
 	end
 
 	def list
