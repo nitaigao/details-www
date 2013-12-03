@@ -4,7 +4,7 @@ Testing::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'welcome#index'
+  # root 'welcome#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -13,7 +13,7 @@ Testing::Application.routes.draw do
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
-  resources :notes
+  # resources :notes
 
   # Example resource route with options:
   #   resources :products do
@@ -55,7 +55,10 @@ Testing::Application.routes.draw do
   #     resources :products
   #   end
 
-  get '/dropbox/list'
-  get '/dropbox/authorize' => 'dropbox#authorize', :method => :get , :as => :dropbox_auth
-  get '/dropbox/callback'  => 'dropbox#callback',  :method => :get , :as => :dropbox_callback
+  get '/notes/index'
+  get '/notes/list'
+  get '/notes/note'
+  get '/notes/authorize'
+  get '/notes/callback'
+
 end
