@@ -58,7 +58,9 @@ Testing::Application.routes.draw do
   get '/notes/index'
   get '/notes/list'
   get '/notes/note'
-  get '/notes/authorize'
-  get '/notes/callback'
+
+  get '/dropbox/clear'
+  get '/dropbox/index'
+  get '/dropbox/callback'
 
 end
