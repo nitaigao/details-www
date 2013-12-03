@@ -9,6 +9,6 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Testing::Application.config.secret_key_base = '63b5b1b9fde440458a2dbdf641c98d63f6d1593f42bb5a6816e7c19cd0b0af9c2de09d47d0a590395b0966a9e8e419cc6815a570108cc22b1a4d93597a041ae3'
-Testing::Application.config.secret_token = ENV['SECRET_TOKEN']
+Details::Application.config.secret_key_base = '63b5b1b9fde440458a2dbdf641c98d63f6d1593f42bb5a6816e7c19cd0b0af9c2de09d47d0a590395b0966a9e8e419cc6815a570108cc22b1a4d93597a041ae3'
+Details::Application.config.secret_token = ENV['SECRET_TOKEN']
 
