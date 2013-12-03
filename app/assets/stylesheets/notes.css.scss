@@ -1,3 +1,16 @@
 // Place all the styles related to the notes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+	background-color: #eee;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-size: 1.2em;
+}
+
+.note {
+	background-color: #fff;
+	margin: 10px auto;
+	padding: 20px;
+	width: 50%;	
+}

@@ -22,6 +22,6 @@ class DropboxController < ApplicationController
     session[:secret_token] = access_token.secret
     @client = Dropbox::API::Client.new :token => session[:access_token], :secret => session[:secret_token]
 
-    redirect_to controller: 'notes', action: 'index'
+    redirect_to controller: 'notes'
   end
 end

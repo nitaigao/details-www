@@ -16,6 +16,7 @@ $(document).ready ->
 	        success: (data) ->
 	        	noteElement = document.createElement "div"
 	        	noteElement.innerText = data
+	        	$(noteElement).addClass("note")
 	        	$('#notes').append noteElement
 	      }
 	      )
