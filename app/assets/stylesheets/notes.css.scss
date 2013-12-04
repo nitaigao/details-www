@@ -12,6 +12,26 @@ body {
 	background-color: #fff;
 	margin: 10px auto;
 	padding: 20px;
-	width: 50%;	
 	white-space: pre-wrap;
+}
+
+@media only screen and (min-width: 760px) {
+    .note {
+		width: 50%;	
+	}
+}
+
+.animate-enter {
+  -webkit-transition: 0.5s linear all;
+  -moz-transition: 0.5s linear all;
+  -o-transition: 0.5s linear all;
+  transition: 0.5s linear all;
+}
+
+.animate-enter {
+  opacity:0;
+}
+
+.animate-enter.animate-enter-active {
+  opacity:1;
 }

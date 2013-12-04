@@ -13,10 +13,11 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require angular
+//= require unstable/angular
+//= require unstable/angular-sanitize
 //= require_tree .
 
-notesApp = angular.module('notesApp', [])
+notesApp = angular.module('notesApp', ['ngSanitize']);
 
 notesApp.filter('newlines', function () {
     return function(text) {
@@ -31,6 +32,7 @@ var NotesListController = ['$scope', '$http', function($scope, $http) {
 		  	$http.get('/notes/note?path=' + listing.path).success(function(note) {
 				$scope.notes.push(note);
 			});
+			return 1;
 		}, $scope.notes);		
 	});
 }];
