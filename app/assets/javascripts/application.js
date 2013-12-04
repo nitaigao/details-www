@@ -13,4 +13,24 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require angular
 //= require_tree .
+
+notesApp = angular.module('notesApp', [])
+
+notesApp.filter('newlines', function () {
+    return function(text) {
+        return text.replace(/\n/g, '<br>');
+    }
+})
+
+notesApp.controller('NotesListController', function($scope, $http) { 
+	$scope.notes = []
+	$http.get('/notes/notes').success(function(listings) {
+		angular.forEach(listings, function(listing, key){
+		  	$http.get('/notes/note?path=' + listing.path).success(function(note) {
+				$scope.notes.push(note);
+			});
+		}, $scope.notes);		
+	});
+});

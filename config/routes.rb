@@ -56,8 +56,8 @@ Details::Application.routes.draw do
   #   end
 
   get '/notes/index'
-  get '/notes/list'
   get '/notes/note'
+  get '/notes/notes'
 
   get '/dropbox/clear'
   get '/dropbox/index'

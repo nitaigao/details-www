@@ -57,6 +57,7 @@ gem 'slim-rails'
 gem 'protected_attributes'
 gem 'dropbox-api'
 gem "paperclip"
+gem 'angularjs-rails'
 
 group :production do
   gem 'rails_12factor'

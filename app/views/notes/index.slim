@@ -1,1 +1,2 @@
-div id="notes"
+div(ng-controller="NotesListController")
+	pre(class="note" ng-repeat="note in notes") {{note}}
