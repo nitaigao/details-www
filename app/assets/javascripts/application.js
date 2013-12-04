@@ -24,8 +24,8 @@ notesApp.filter('newlines', function () {
     }
 })
 
-notesApp.controller('NotesListController', function($scope, $http) { 
-	$scope.notes = []
+var NotesListController = ['$scope', '$http', function($scope, $http) {
+  $scope.notes = []
 	$http.get('/notes/notes').success(function(listings) {
 		angular.forEach(listings, function(listing, key){
 		  	$http.get('/notes/note?path=' + listing.path).success(function(note) {
@@ -33,4 +33,6 @@ notesApp.controller('NotesListController', function($scope, $http) {
 			});
 		}, $scope.notes);		
 	});
-});
+}];
+
+notesApp.controller('NotesListController', NotesListController);
