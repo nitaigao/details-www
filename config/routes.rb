@@ -59,6 +59,8 @@ Details::Application.routes.draw do
   get '/notes/note'
   get '/notes/notes'
 
+  get '/ping' => 'ping#index'
+
   get '/dropbox/clear'
   get '/dropbox/index'
   get '/dropbox/callback'
