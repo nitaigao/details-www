@@ -58,8 +58,8 @@ gem 'protected_attributes'
 gem 'dropbox-api'
 gem "paperclip"
 gem 'angularjs-rails'
+gem 'newrelic_rpm'
 
 group :production do
   gem 'rails_12factor'
-  gem 'newrelic_rpm'
 end
